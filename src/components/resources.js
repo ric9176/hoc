@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default () => {
-  return (
+export default () => (
     <div>
       <h1>Secret whatevs</h1>
     </div>
   );
-};
