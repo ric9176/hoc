@@ -7,8 +7,19 @@ const withAuth = ComposedComponent => {
       router: React.PropTypes.object.isRequired
     }
 
+    componentWillMount() {
+      if (!this.props.authenticated) {
+        this.context.router.push('/')
+      }
+    }
+
+    componentWillUpdate(nextProps) {
+      if (!nextProps.authenticated) {
+        this.context.router.push('/')
+      }
+    }
+
     render() {
-      console.log(this.context)
       return <ComposedComponent {...this.props} />;
     }
   }
