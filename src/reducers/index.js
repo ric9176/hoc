@@ -3,7 +3,7 @@ import authenticationReducer from './authentication'
 
 
 const rootReducer = combineReducers({
-  authenicated: authenticationReducer
+  authenticated: authenticationReducer
 });
 
 export default rootReducer;

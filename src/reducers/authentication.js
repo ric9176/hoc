@@ -1,9 +1,12 @@
 import { CHANGE_AUTH } from '../actions/types';
 
-export default function(state = false, action) {
+const authenticationReducer = (state=false, action) => {
   switch (action.type) {
     case CHANGE_AUTH:
-      return action.payoad;
+      return action.payload;
+    default:
+      return state;
   }
-  return state;
-}
+};
+
+export default authenticationReducer;
